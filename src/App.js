@@ -1,5 +1,13 @@
+import React from "react";
+
+import CategoryInfoDesktop from "./components/CategoryInfoDesktop.js";
+
 const App = () => {
-  return <h1>Hello, world</h1>;
+  return (
+    <div>
+      <CategoryInfoDesktop />
+    </div>
+  );
 };
 
 export default App;
