@@ -3,6 +3,7 @@ import Product from "./components/Product";
 import CategoryInfoDesktop from "./components/CategoryInfoDesktop";
 import ActiveFilters from "./components/ActiveFilters";
 import DisplayedProductCount from './components/DisplayedProductCount';
+import SortProducts from './components/SortProducts';
 
 const App = () => {
   const [categories, setCategories] = useState({
@@ -35,7 +36,7 @@ const App = () => {
       .length;
   };
 
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: 1,
       name: "Čerstvé máslo, 240-260 g",
@@ -265,7 +266,7 @@ const App = () => {
         "Bezlepkový",
       ],
     },
-  ]; // Define the 'products' variable with an appropriate value or fetch it from an API
+  ]); // Define the 'products' variable with an appropriate value or fetch it from an API
 
 
   
@@ -279,6 +280,7 @@ const App = () => {
     <div className="App">
       <CategoryInfoDesktop />
       <DisplayedProductCount products={products} categories={categories} />
+      <SortProducts products={products} setProducts={setProducts} />
       <ActiveFilters categories={categories} setCategories={setCategories} />
       {Object.keys(categories).map((category) => (
         <div key={category}>
