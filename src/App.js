@@ -201,7 +201,7 @@ const App = () => {
       price: "235 Kč",
       image:
         "https://assets.scuk.cz/images/20210223/f6/f6d74eab817ed7e3b9abbb3638e8047946e10086-fit-resize-white-320x320.webp",
-      category: ["BIO", "Farmáři a výrobci", "Bezlepkový"],
+      category: ["BIO", "Farmáři a výrobci"],
     },
     {
       id: 13,
