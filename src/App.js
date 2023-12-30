@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Product from "./components/Product";
 import CategoryInfoDesktop from "./components/CategoryInfoDesktop";
 import ActiveFilters from "./components/ActiveFilters";
+import DisplayedProductCount from './components/DisplayedProductCount';
 
 const App = () => {
   const [categories, setCategories] = useState({
@@ -10,14 +11,18 @@ const App = () => {
     "Farmáři a výrobci": false,
     "Zvýhodněná nabídka": false,
     "Dříve zakoupeno": false,
-    Novinky: false,
-    BIO: false,
+    "Novinky": false,
+    "BIO": false,
     "Počet vajec v balení": false,
     "Velké balení": false,
-    Bezlepkový: false,
+    "Bezlepkový": false,
     // další kategorie...
   });
 
+
+
+
+  
   const toggleCategory = (category) => {
     setCategories((prevCategories) => ({
       ...prevCategories,
@@ -262,6 +267,8 @@ const App = () => {
     },
   ]; // Define the 'products' variable with an appropriate value or fetch it from an API
 
+
+  
   const filteredProducts = products.filter((product) =>
     product.category.some((category) => categories[category])
   );
@@ -271,6 +278,7 @@ const App = () => {
   return (
     <div className="App">
       <CategoryInfoDesktop />
+      <DisplayedProductCount products={products} categories={categories} />
       <ActiveFilters categories={categories} setCategories={setCategories} />
       {Object.keys(categories).map((category) => (
         <div key={category}>
