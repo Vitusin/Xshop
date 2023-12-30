@@ -1,6 +1,6 @@
 import "./CategoryInfoDesktop.css";
 import Header from "./Header.js";
-import Text from "./text.js";
+import Text from "./Text.js";
 
 const CategoryInfoDesktop = () => {
   return (
