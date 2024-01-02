@@ -1,8 +1,10 @@
 body {
   display: flex;
-  width: 1920px;
+  width: auto;
   padding-bottom: 733px;
   flex-direction: column;
   align-items: center;
+  background: #FFFFFF;
+  
 }
 

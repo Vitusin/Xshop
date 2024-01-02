@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './FilterList.css';
 
 function FilterList({ categories, setCategories }) {
   const [showAll, setShowAll] = useState(false);
